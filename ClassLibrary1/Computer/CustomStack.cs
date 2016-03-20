@@ -8,5 +8,6 @@ namespace ClassLibrary1.Computer
 {
     class CustomStack
     {
+        
     }
 }
