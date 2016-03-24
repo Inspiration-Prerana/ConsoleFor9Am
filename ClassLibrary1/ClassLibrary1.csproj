@@ -45,6 +45,7 @@
     <Compile Include="Class3.cs" />
     <Compile Include="Computer\CustomQueue.cs" />
     <Compile Include="Computer\CustomStack.cs" />
+    <Compile Include="Computer\CutomQueueList.cs" />
     <Compile Include="Math\Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -13,7 +13,7 @@ namespace ClassLibrary1.Computer
     {
         #region Members
         private int[] _array = new int[10];
-        public int Count = 0;
+        private int _count = 0;
         #endregion
 
         #region Constructor
@@ -24,7 +24,14 @@ namespace ClassLibrary1.Computer
         {
 
         }
-        
+        /// <summary>
+        /// Constructor with dynamic array size
+        /// </summary>
+        /// <param name="i">number of elements in an array</param>
+        public CustomQueue(int i)
+        {
+            this._array = new int[i];
+        }
         #endregion
 
         #region Public methods
@@ -34,10 +41,10 @@ namespace ClassLibrary1.Computer
         /// <param name="item">item to be inserted</param>
         public void Enqueue(int item)
         {
-            if (Count<=10)
+            if (_count<=10)
             {
-                _array[Count] = item;
-                Count++;
+                _array[_count] = item;
+                _count++;
             }
         }
         /// <summary>
@@ -47,12 +54,22 @@ namespace ClassLibrary1.Computer
         public int Dequeue()
         {
             int ret = _array[0];
-            for (int i = 1; i < Count-1; i++)
+            for (int i = 1; i < _count-1; i++)
             {
                 _array[i - 1] = _array[i];
             }
-            Count--;
+            _count--;
             return ret;
+        }
+
+        public int[] GetItems()
+        {
+            return _array;
+        }
+
+        public int Count()
+        {
+            return _count;
         }
         #endregion
 
