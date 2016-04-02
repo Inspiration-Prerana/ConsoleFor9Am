@@ -41,7 +41,7 @@ namespace ClassLibrary1.Computer
         /// <param name="item">item to be inserted</param>
         public void Enqueue(int item)
         {
-            if (_count<=10)
+            if (_count<=_array.Length)
             {
                 _array[_count] = item;
                 _count++;
@@ -54,7 +54,7 @@ namespace ClassLibrary1.Computer
         public int Dequeue()
         {
             int ret = _array[0];
-            for (int i = 1; i < _count-1; i++)
+            for (int i = 1; i <= _count-1; i++)
             {
                 _array[i - 1] = _array[i];
             }
@@ -64,7 +64,12 @@ namespace ClassLibrary1.Computer
 
         public int[] GetItems()
         {
-            return _array;
+            var tmp = new int[_count];
+            for (int i = 0; i < _count; i++)
+            {
+                tmp[i] = _array[i];
+            }
+            return tmp;
         }
 
         public int Count()
