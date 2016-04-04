@@ -30,7 +30,7 @@ namespace ConsoleApplication4
 
         static void InitiateInheritence()
         {
-            SaburLal s = new SaburLal();
+            Sabur s = new Sabur();
             Pramod p = new Pramod();
             Prakash _p = new Prakash();
             SonaLal Grandpaa = new SonaLal();
@@ -42,7 +42,11 @@ namespace ConsoleApplication4
             //s.Call();
             //p.Call();
             //_p.Call();
-
+            Rectangle r = new Rectangle(0, 0);
+            
+            Console.WriteLine("Area is : " + r.Area);
+            
+            Console.WriteLine("Area is : "+r.Area);
             //p.Name();
             //_p.Name();
 

@@ -13,29 +13,33 @@ namespace ConsoleApplication4
         public SonaLal()
         {
             this.LastName = "Phanait";
-            this.FirstName = "Sona Lal";
+            this.FirstName = "Sona";
         }
 
         public override string ToString()
         {
-            return this.FirstName+" "+this.LastName;
+            return this.FirstName + " " + this.LastName;
         }
     }
-    public class SaburLal:SonaLal
+    public class Sabur:SonaLal
     {
-        
-        public SaburLal()
+        public string MidName;
+        public Sabur()
         {
-            this.FirstName = "Sabur Lal";
+            this.FirstName = "Sabur";
+            this.MidName = "Lal";
         }
         public void Call()
         {
             Console.WriteLine("Father");
         }
-        
+        public override string ToString()
+        {
+            return this.FirstName + " "+this.MidName+" " + this.LastName;
+        }
     }
 
-    public class Pramod : SaburLal
+    public sealed class Pramod : Sabur
     {
         //public string FirstName;
         public Pramod()
@@ -50,10 +54,13 @@ namespace ConsoleApplication4
         {
             Console.WriteLine("Younger Son");
         }
-       
+        public override string ToString()
+        {
+            return this.FirstName + " " + this.LastName;
+        }
     }
 
-    public class Prakash : SaburLal
+    public class Prakash : Sabur
     {
         //public string FirstName;
         public Prakash()
@@ -70,4 +77,5 @@ namespace ConsoleApplication4
         }
        
     }
+
 }
