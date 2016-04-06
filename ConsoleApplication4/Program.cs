@@ -24,8 +24,35 @@ namespace ConsoleApplication4
             //Console.ReadLine();
             //cs.Dequeue();
             //DisplayResult();
-            InitiateInheritence();
+            //InitiateInheritence();
+
+            //Polymorph();
+
+            InterfaceImp();
             Console.ReadLine();
+            
+        }
+
+        static void Polymorph()
+
+        {
+            polymorphism p = new polymorphism();
+            p.LoadStaffs();
+            p.DoPayroll();
+        }
+
+        static void InterfaceImp()
+        {
+            MyControl myControl = new MyControl();
+            IOblivion val = (IOblivion)myControl;
+            bool success = val.Validate();
+            Console.WriteLine("The validation of '{0}' was {1}successful",
+            myControl.data,
+            (true == success ? "" : "not "));
+
+            MyClass mycls = new MyClass();
+            val = (IOblivion)mycls;
+            bool mybool = val.Validate();
         }
 
         static void InitiateInheritence()
