@@ -1,0 +1,9 @@
+E:\ItTraining\ConsoleOOP\ClassLibrary1Tests\bin\Debug\ClassLibrary1Tests.dll
+E:\ItTraining\ConsoleOOP\ClassLibrary1Tests\bin\Debug\ClassLibrary1Tests.pdb
+E:\ItTraining\ConsoleOOP\ClassLibrary1Tests\bin\Debug\ClassLibrary1.dll
+E:\ItTraining\ConsoleOOP\ClassLibrary1Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\ItTraining\ConsoleOOP\ClassLibrary1Tests\bin\Debug\ClassLibrary1.pdb
+E:\ItTraining\ConsoleOOP\ClassLibrary1Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+E:\ItTraining\ConsoleOOP\ClassLibrary1Tests\obj\Debug\ClassLibrary1Tests.csprojResolveAssemblyReference.cache
+E:\ItTraining\ConsoleOOP\ClassLibrary1Tests\obj\Debug\ClassLibrary1Tests.dll
+E:\ItTraining\ConsoleOOP\ClassLibrary1Tests\obj\Debug\ClassLibrary1Tests.pdb

@@ -6,6 +6,17 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
+    public enum Division
+    {
+        Distinction,
+        FirstDivision,
+        SecondDivision,
+        ThirdDivision,
+        Fail,
+        NotAvailable
+
+    }
+
     /// <summary>
     /// 
     /// </summary>
@@ -18,7 +29,7 @@ namespace ClassLibrary1
         private float total;
         private float totalFull;
         private float percentage;
-        private string division;
+        private Division division;
         #endregion
 
         #region Constructors
@@ -77,27 +88,27 @@ namespace ClassLibrary1
         {
             if (percentage < 32)
             {
-                this.division = "Failed";
+                this.division = ClassLibrary1.Division.Fail;
             }
             else if (percentage < 45)
             {
-                this.division = "Third";
+                this.division = ClassLibrary1.Division.ThirdDivision;
             }
             else if (percentage < 60)
             {
-                this.division = "Second";
+                this.division = ClassLibrary1.Division.SecondDivision;
             }
             else if (percentage < 80)
             {
-                this.division = "First";
+                this.division = ClassLibrary1.Division.FirstDivision;
             }
             else if (percentage <= 100)
             {
-                this.division = "Distinction";
+                this.division = ClassLibrary1.Division.Distinction;
             }
             else
             {
-                this.division = "Not Appicable";
+                this.division = ClassLibrary1.Division.NotAvailable;
             }
         }
 
@@ -112,7 +123,7 @@ namespace ClassLibrary1
         {
             get { return this.percentage; }
         }
-        public string Division
+        public Division Division
         {
             get { return this.division; }
         }

@@ -11,7 +11,11 @@ namespace ConsoleApplication4
         private decimal _length;
         private decimal _breadth;
         public decimal Area {
-            get { return this._breadth * this._length; }
+            get
+            {
+
+                return this._breadth * this._length;
+            }
         }
         public Rectangle(decimal Length, decimal breadth)
         {

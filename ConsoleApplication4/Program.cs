@@ -14,6 +14,8 @@ namespace ConsoleApplication4
         static CustomQueueTemplates<int> cInt = new CustomQueueTemplates<int>();
         static CustomQueueTemplates<string> cString = new CustomQueueTemplates<string>();
 
+        
+
         static void Main(string[] args)
         {
 
@@ -28,9 +30,54 @@ namespace ConsoleApplication4
 
             //Polymorph();
 
-            InterfaceImp();
+            //InterfaceImp();
+
+            ExceptionFunc();
             Console.ReadLine();
             
+        }
+
+        static void ExceptionFunc()
+        {
+            List<string> stringlist = new List<string>();
+            test1class t = new test1class();
+            try
+            {
+                
+                t.string1 = "string1";
+                Console.WriteLine(t.string1);
+
+                stringlist.Add("123awdfa");
+
+                //t.str = stringlist;
+                //t.str1.Add("123");
+
+                foreach (var item in t.str)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine(ex.ToString());
+                if (ex.Message.Contains("Object reference not set to an instance of an object."))
+                {
+                    Console.WriteLine("Object not created. Trying to create a new object.");
+                    t.str = stringlist;
+                    
+                }
+                else
+                {
+                    Console.WriteLine("We are sorry to inform you that we also dont know what crashed the system. :("); 
+                }
+            }
+            finally
+            {
+                foreach (var item in t.str)
+                {
+                    Console.WriteLine(item);
+                }
+            }
         }
 
         static void Polymorph()
